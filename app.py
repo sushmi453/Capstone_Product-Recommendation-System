@@ -12,7 +12,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import LancasterStemmer
 from nltk.stem import WordNetLemmatizer
-nltk.data.path.append('./nltk_data/')
+#nltk.data.path.append('./nltk_data/')
 #nltk.download('punkt')
 #nltk.download('stopwords')
 #nltk.download('wordnet')
