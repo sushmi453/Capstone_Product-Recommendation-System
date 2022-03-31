@@ -1,5 +1,6 @@
 #from cgitb import text
 from flask import Flask,jsonify,render_template,request
+nltk.data.path.append('./nltk_data/')
 import model 
 #import pickle as pk
 app = Flask('__name__')
