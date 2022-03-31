@@ -1,6 +1,7 @@
 #from cgitb import text
 from flask import Flask,jsonify,render_template,request
 #import model 
+import pickle as pk
 app = Flask('__name__')
 
 # load the pickle files 
