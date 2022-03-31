@@ -9,7 +9,7 @@ tfidf_transformer = pk.load(open('Pickle/tfidf_transformer.pkl','rb')) # TFIDF T
 model = pk.load(open('Pickle/model.pkl','rb'))                          # Classification Model
 recommend_matrix = pk.load(open('Pickle/user_final_rating.pkl','rb'))   # User-User Recommendation System 
 
-import model 
+#import model 
 
 valid_userid = ['warren','00sab00','1234','zippy','zburt5','joshua','dorothy w','rebecca','walker557','samantha','raeanne','kimmie','cassie','moore222']
 @app.route('/')
