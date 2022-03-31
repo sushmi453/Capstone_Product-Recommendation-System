@@ -118,6 +118,7 @@ def recommend_products(user_name):
     output_df['lemmatized_text'] = output_df['reviews_text'].map(lambda text: normalize_and_lemmaize(text))
     output_df['predicted_sentiment'] = model_predict(output_df['lemmatized_text'])
     return output_df
+    print(user_name)
     
 def top5_products(df):
     total_product=df.groupby(['name']).agg('count')
