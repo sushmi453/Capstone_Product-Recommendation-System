@@ -5,6 +5,7 @@ import os
 
 #to get the current working directory
 dir = os.getcwd() + "/" + 'nltk_data'
+print(dir)
 
 import nltk
 nltk.data.path.append(dir)
