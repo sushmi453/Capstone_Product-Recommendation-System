@@ -1,7 +1,8 @@
 #from cgitb import text
 from flask import Flask,jsonify,render_template,request
 import os
-dir = os.chdir() + "/" + nltk_data
+dir = os.chdir(nltk_data)
+#dir = os.chdir(nltk_data) + "/" + nltk_data
 import nltk
 nltk.data.path.append(dir)
 #import model 
