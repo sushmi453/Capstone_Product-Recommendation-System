@@ -21,11 +21,11 @@ from nltk.stem import WordNetLemmatizer
 #nltk.download('wordnet')
 #nltk.download('omw-1.4')
 
-# load the pickle files 
-count_vector = pk.load(open('Pickle/count_vector.pkl','rb'))            # Count Vectorizer
-tfidf_transformer = pk.load(open('Pickle/tfidf_transformer.pkl','rb')) # TFIDF Transformer
-model = pk.load(open('Pickle/model.pkl','rb'))                          # Classification Model
-recommend_matrix = pk.load(open('Pickle/user_final_rating.pkl','rb'))   # User-User Recommendation System 
+# # load the pickle files 
+# count_vector = pk.load(open('Pickle/count_vector.pkl','rb'))            # Count Vectorizer
+# tfidf_transformer = pk.load(open('Pickle/tfidf_transformer.pkl','rb')) # TFIDF Transformer
+# model = pk.load(open('Pickle/model.pkl','rb'))                          # Classification Model
+# recommend_matrix = pk.load(open('Pickle/user_final_rating.pkl','rb'))   # User-User Recommendation System 
 
 #nlp = spacy.load('en_core_web_sm',disable=['ner','parser'])
 
