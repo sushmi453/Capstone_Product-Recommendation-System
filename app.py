@@ -1,7 +1,15 @@
 #from cgitb import text
 from flask import Flask,jsonify,render_template,request
-import model 
+#import model 
 app = Flask('__name__')
+
+# load the pickle files 
+count_vector = pk.load(open('Pickle/count_vector.pkl','rb'))            # Count Vectorizer
+tfidf_transformer = pk.load(open('Pickle/tfidf_transformer.pkl','rb')) # TFIDF Transformer
+model = pk.load(open('Pickle/model.pkl','rb'))                          # Classification Model
+recommend_matrix = pk.load(open('Pickle/user_final_rating.pkl','rb'))   # User-User Recommendation System 
+
+import model 
 
 valid_userid = ['warren','00sab00','1234','zippy','zburt5','joshua','dorothy w','rebecca','walker557','samantha','raeanne','kimmie','cassie','moore222']
 @app.route('/')
