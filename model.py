@@ -1,5 +1,5 @@
 # Importing Libraries
-from nltk.corpus.reader import reviews
+#from nltk.corpus.reader import reviews
 import pandas as pd
 import re, nltk, spacy, string
 import en_core_web_sm
@@ -11,18 +11,19 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import LancasterStemmer
 from nltk.stem import WordNetLemmatizer
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
-nltk.download('omw-1.4')
+nltk.data.path.append('./nltk_data/')
+#nltk.download('punkt')
+#nltk.download('stopwords')
+#nltk.download('wordnet')
+#nltk.download('omw-1.4')
 
 # load the pickle files 
-count_vector = pk.load(open('./Pickle/count_vector.pkl','rb'))            # Count Vectorizer
-tfidf_transformer = pk.load(open('./Pickle/tfidf_transformer.pkl','rb')) # TFIDF Transformer
-model = pk.load(open('./Pickle/model.pkl','rb'))                          # Classification Model
-recommend_matrix = pk.load(open('./Pickle/user_final_rating.pkl','rb'))   # User-User Recommendation System 
+count_vector = pk.load(open('Pickle/count_vector.pkl','rb'))            # Count Vectorizer
+tfidf_transformer = pk.load(open('Pickle/tfidf_transformer.pkl','rb')) # TFIDF Transformer
+model = pk.load(open('Pickle/model.pkl','rb'))                          # Classification Model
+recommend_matrix = pk.load(open('Pickle/user_final_rating.pkl','rb'))   # User-User Recommendation System 
 
-nlp = spacy.load('en_core_web_sm',disable=['ner','parser'])
+#nlp = spacy.load('en_core_web_sm',disable=['ner','parser'])
 
 product_df = pd.read_csv('sample30.csv',sep=",")
 
@@ -106,7 +107,7 @@ def normalize_and_lemmaize(input_text):
 
 #Recommend the products based on the sentiment from model
 def recommend_products(user_name):
-    recommend_matrix = pk.load(open('./Pickle/user_final_rating.pkl','rb'))
+    recommend_matrix = pk.load(open('Pickle/user_final_rating.pkl','rb'))
     product_list = pd.DataFrame(recommend_matrix.loc[user_name].sort_values(ascending=False)[0:20])
     product_frame = product_df[product_df.name.isin(product_list.index.tolist())]
     output_df = product_frame[['name','reviews_text']]
