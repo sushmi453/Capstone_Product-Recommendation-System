@@ -6,7 +6,7 @@ nltk.data.path.append('./nltk_data/')
 import re
 
 #import re,nltk,spacy, string
-import en_core_web_sm
+#import en_core_web_sm
 import pickle as pk
 
 from sklearn.feature_extraction.text import TfidfTransformer, CountVectorizer
