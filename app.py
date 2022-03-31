@@ -1,7 +1,7 @@
 # Importing Libraries
 #from nltk.corpus.reader import reviews
 import pandas as pd
-#nltk.data.path.append('./nltk_data/')
+nltk.data.path.append('./nltk_data/')
 import re, nltk, spacy, string
 import en_core_web_sm
 import pickle as pk
