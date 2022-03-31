@@ -1,9 +1,11 @@
 #from cgitb import text
 from flask import Flask,jsonify,render_template,request
+#importing the os module
 import os
-#dir = os.chdir(r"C:/Users/geddamsg/Capstone_Product-Recommendation-System/nltk_data")
-#dir = os.chdir('C:\\Users\\geddamsg\\Capstone_Product-Recommendation-System\\nltk_data') + "/" + nltk_data
-dir = os.chdir('C:\\Users\\geddamsg\\Capstone_Product-Recommendation-System\\nltk_data')
+
+#to get the current working directory
+dir = os.getcwd() + "/" + nltk_data
+
 import nltk
 nltk.data.path.append(dir)
 #import model 
