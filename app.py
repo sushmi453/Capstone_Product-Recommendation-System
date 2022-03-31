@@ -1,9 +1,9 @@
 # Importing Libraries
 #from nltk.corpus.reader import reviews
 import pandas as pd
-
+import nltk
 nltk.data.path.append('./nltk_data/')
-import re, nltk,spacy, string
+import re,spacy, string
 
 #import re,nltk,spacy, string
 import en_core_web_sm
