@@ -1,8 +1,11 @@
 # Importing Libraries
 #from nltk.corpus.reader import reviews
 import pandas as pd
+
 nltk.data.path.append('./nltk_data/')
-import re, spacy, string
+import re, nltk,spacy, string
+
+#import re,nltk,spacy, string
 import en_core_web_sm
 import pickle as pk
 
@@ -10,7 +13,7 @@ from sklearn.feature_extraction.text import TfidfTransformer, CountVectorizer
 from sklearn.ensemble import RandomForestClassifier,GradientBoostingClassifier
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-from nltk.stem import LancasterStemmer
+#from nltk.stem import LancasterStemmer
 from nltk.stem import WordNetLemmatizer
 #nltk.data.path.append('./nltk_data/')
 #nltk.download('punkt')
@@ -64,14 +67,14 @@ def remove_stopwords(words):
             new_words.append(word)
     return new_words
 
-def stem_words(words):
-    """Stem words in list of tokenized words"""
-    stemmer = LancasterStemmer()
-    stems = []
-    for word in words:
-        stem = stemmer.stem(word)
-        stems.append(stem)
-    return stems
+# def stem_words(words):
+#     """Stem words in list of tokenized words"""
+#     stemmer = LancasterStemmer()
+#     stems = []
+#     for word in words:
+#         stem = stemmer.stem(word)
+#         stems.append(stem)
+#     return stems
 
 def lemmatize_verbs(words):
     """Lemmatize verbs in list of tokenized words"""
