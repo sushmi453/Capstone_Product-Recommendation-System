@@ -28,20 +28,21 @@
       </div>
     </div>
     <br><br>
-    <span style="color:white;">Sample username, please enter one at a time : </span>
+    <span style="color:red;">Sample username, please enter one at a time : </span>
 	<kbd>warren</kbd> &nbsp; <kbd>00sab00</kbd>  &nbsp; <kbd>1234</kbd>  &nbsp; <kbd>zippy</kbd>  &nbsp; <kbd>joshua</kbd> &nbsp;  <kbd>dorothy w</kbd> &nbsp; <kbd>rebecca</kbd>  &nbsp; <kbd>walker557</kbd>  &nbsp; <kbd>samantha</kbd>  &nbsp; <kbd>raeanne</kbd> &nbsp; <kbd>kimmie</kbd> &nbsp; <kbd>cassie</kbd>  &nbsp; <kbd>moore222</kbd>  &nbsp; <kbd>amanda</kbd> 
 	<br>
     <br>
 	
-<!--     <div class="alert alert-success" role="alert">
+<div class="alert alert-success" role="alert">
       {{text}}
     </div>
-    <table class="table table-striped"> -->
+    <table class="table table-striped">
       <tbody>
         {% for row in row_data %}
         <tr>
           {% for col, row_ in zip(column_names, row) %}
           <td>{{row_}}</td>
+	  <td>{text-align: center;</td>
           {% endfor %}
         </tr>
         {% endfor %}
