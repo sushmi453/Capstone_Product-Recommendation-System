@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- CSS only -->
+<link href="static/css/style.css" rel="stylesheet">
+
+<title>Capstone Project | Sushmitha Geddam</title>
+
+<body>
+  <div class="container">
+    <h1>Sentiment Based Product Recommendation System</h1>
+    <div class="row">
+      <div class="col">
+        <form class="row row-cols-lg-auto g-3 align-items-center" method="POST" action="/recommend">
+          <div class="col-12">
+            <!--<label class="visually-hidden" for="User Name">Username</label> 
+            <div class="input-group"> -->
+              <div class="input-group-text">Enter User Name</div>
+              <input type="text" class="form-control" id="User Name" name="User Name" placeholder="Username"
+              >
+            </div>
+          </div>
+          <div class="col-12">
+            <button type="submit" value="recommend" class="btn btn-primary">Submit</button>
+          </div>
+           
+             
+        </form>
+      </div>
+    </div>
+    <br><br>
+    <span style="color:red;">Sample username, please enter one at a time : </span>
+	<kbd>warren</kbd> &nbsp; <kbd>00sab00</kbd>  &nbsp; <kbd>1234</kbd>  &nbsp; <kbd>zippy</kbd>  &nbsp; <kbd>joshua</kbd> &nbsp;  <kbd>dorothy w</kbd> &nbsp; <kbd>rebecca</kbd>  &nbsp; <kbd>walker557</kbd>  &nbsp; <kbd>samantha</kbd>  &nbsp; <kbd>raeanne</kbd> &nbsp; <kbd>kimmie</kbd> &nbsp; <kbd>cassie</kbd>  &nbsp; <kbd>moore222</kbd>  &nbsp; <kbd>amanda</kbd> 
+	<br>
+    <br>
+	
+    <div class="alert alert-success" role="alert">
+      {{text}}
+    </div>
+    <table class="table table-striped">
+      <tbody>
+        {% for row in row_data %}
+        <tr>
+          {% for col, row_ in zip(column_names, row) %}
+          <td>{{row_}}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
